@@ -2,7 +2,7 @@ import asyncio, time, sqlite3, json
 from tremolo import Tremolo
 
 con = sqlite3.connect("test.sqlite")
-con.cursor().execute(open("schema.sql").read())
+con.cursor().execute(open("install.sql").read())
 html = open("index.html").read()
 
 app = Tremolo()
